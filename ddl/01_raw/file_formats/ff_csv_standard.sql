@@ -1,0 +1,9 @@
+-- File format for standard CSV files with quoted fields
+-- Co-authored with CoCo
+
+CREATE OR REPLACE FILE FORMAT FFIEC.RAW.FF_CSV_STANDARD
+  TYPE = 'CSV'
+  FIELD_OPTIONALLY_ENCLOSED_BY = '"'
+  MULTI_LINE = TRUE
+  ERROR_ON_COLUMN_COUNT_MISMATCH = TRUE
+  EMPTY_FIELD_AS_NULL = TRUE;
