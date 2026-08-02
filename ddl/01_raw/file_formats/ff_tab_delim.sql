@@ -1,0 +1,10 @@
+-- File format for tab-delimited files with quoted fields
+-- Co-authored with CoCo
+
+CREATE OR REPLACE FILE FORMAT FFIEC.RAW.FF_TAB_DELIM
+  TYPE = 'CSV'
+  FIELD_DELIMITER = '\t'
+  FIELD_OPTIONALLY_ENCLOSED_BY = '"'
+  MULTI_LINE = TRUE
+  ERROR_ON_COLUMN_COUNT_MISMATCH = TRUE
+  EMPTY_FIELD_AS_NULL = TRUE;
